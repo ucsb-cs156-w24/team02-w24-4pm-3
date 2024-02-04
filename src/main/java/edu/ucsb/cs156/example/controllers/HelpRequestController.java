@@ -35,7 +35,7 @@ import java.time.LocalDateTime;
 public class HelpRequestController extends ApiController {
 
     @Autowired
-    HelpRequestController helpRequestRepository;
+    HelpRequestRepository helpRequestRepository;
 
     @Operation(summary= "List all help requests")
     @PreAuthorize("hasRole('ROLE_USER')")
