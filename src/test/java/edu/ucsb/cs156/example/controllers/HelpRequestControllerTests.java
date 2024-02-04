@@ -143,7 +143,7 @@ public class HelpRequestControllerTests extends ControllerTestCase {
                                 .andExpect(status().isOk()).andReturn();
 
                 // assert
-                verify(helpRequestRepository, times(1)).findAll();
+                verify(helpRequestRepository, times(1)).save(helpRequest1);
                 String expectedJson = mapper.writeValueAsString(helpRequest1);
                 String responseString = response.getResponse().getContentAsString();
                 assertEquals(expectedJson, responseString);
