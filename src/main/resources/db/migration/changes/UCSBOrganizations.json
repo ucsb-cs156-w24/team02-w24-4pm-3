@@ -2,10 +2,10 @@
     {
         "changeSet": {
           "id": "UCSBOrganizations-1",
-          "author": "LayaP",
+          "author": "MattP",
           "preConditions": [
             {
-              "onFail": "LAYA_RAN"
+              "onFail": "MARK_RAN"
             },
             {
               "not": [
@@ -27,7 +27,7 @@
                         "primaryKey": true,
                         "primaryKeyName": "CONSTRAINT_3"
                       },
-                      "name": "ORGCODE",
+                      "name": "ORG_CODE",
                       "type": "VARCHAR(255)"
                     }
                   },

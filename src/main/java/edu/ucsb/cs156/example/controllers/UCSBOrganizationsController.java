@@ -36,6 +36,8 @@ public class UCSBOrganizationsController extends ApiController {
     @GetMapping("/all")
     public Iterable<UCSBOrganizations> allOrganizations() {
         Iterable<UCSBOrganizations> organizations = ucsbOrganizationsRepository.findAll();
+        System.out.println("call to the api\n");
+        System.out.print(organizations);
         return organizations;
     }
 
