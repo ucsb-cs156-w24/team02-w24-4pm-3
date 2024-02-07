@@ -2,7 +2,7 @@
     {
         "changeSet": {
           "id": "UCSBOrganizations-1",
-          "author": "MattP",
+          "author": "LayaP",
           "preConditions": [
             {
               "onFail": "MARK_RAN"
@@ -23,6 +23,7 @@
                 "columns": [
                   {
                     "column": {
+                      "autoIncrement": true,
                       "constraints": {
                         "primaryKey": true,
                         "primaryKeyName": "CONSTRAINT_3"
@@ -33,27 +34,18 @@
                   },
                   {
                     "column": {
-                      "constraints": {
-                        "nullable": false
-                      },
                       "name": "ORG_TRANSLATION_SHORT",
                       "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
-                      "constraints": {
-                        "nullable": false
-                      },
                       "name": "ORG_TRANSLATION",
                       "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
-                      "constraints": {
-                        "nullable": false
-                      },
                       "name": "INACTIVE",
                       "type": "BOOLEAN"
                     }
