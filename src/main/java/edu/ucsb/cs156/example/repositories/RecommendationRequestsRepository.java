@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface RecomendationRequestsRepository extends CrudRepository<RecommendationRequests, Long> {
- 
+public interface RecommendationRequestsRepository extends CrudRepository<RecommendationRequests, Long> {
+    Iterable<RecommendationRequests> findAllByRequesterEmail(String requesterEmail);
 }
