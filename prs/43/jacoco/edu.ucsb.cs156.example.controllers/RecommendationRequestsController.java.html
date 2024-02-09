@@ -27,8 +27,8 @@ import javax.validation.Valid;
 
 import java.time.LocalDateTime;
 
-@Tag(name = &quot;recommendationrequests&quot;)
-@RequestMapping(&quot;/api/recommendationrequests&quot;)
+@Tag(name = &quot;RecommendationRequests&quot;)
+@RequestMapping(&quot;/api/recommendationrequest&quot;)
 @RestController
 <span class="fc" id="L33">@Slf4j</span>
 <span class="fc" id="L34">public class RecommendationRequestsController extends ApiController {</span>
@@ -76,7 +76,7 @@ import java.time.LocalDateTime;
 <span class="fc" id="L76">        return savedRecommendationRequests;</span>
     }
 
-    @Operation(summary= &quot;Get a single recommendation request&quot;)
+    @Operation(summary= &quot;Get a recommendation request&quot;)
     @PreAuthorize(&quot;hasRole('ROLE_USER')&quot;)
     @GetMapping(&quot;&quot;)
     public RecommendationRequests getById(
@@ -87,7 +87,7 @@ import java.time.LocalDateTime;
 <span class="fc" id="L87">        return recommendationRequests;</span>
     }
 
-    @Operation(summary= &quot;Delete a request&quot;)
+    @Operation(summary= &quot;Delete a recommendation request&quot;)
     @PreAuthorize(&quot;hasRole('ROLE_ADMIN')&quot;)
     @DeleteMapping(&quot;&quot;)
     public Object deleteRecommendationRequest(
@@ -99,7 +99,7 @@ import java.time.LocalDateTime;
 <span class="fc" id="L99">        return genericMessage(&quot;RecommendationRequest with id %s deleted&quot;.formatted(id));</span>
     }
 
-    @Operation(summary= &quot;Update a single request&quot;)
+    @Operation(summary= &quot;Update a single recommendation request&quot;)
     @PreAuthorize(&quot;hasRole('ROLE_ADMIN')&quot;)
     @PutMapping(&quot;&quot;)
     public RecommendationRequests updateRecommendationRequests(
