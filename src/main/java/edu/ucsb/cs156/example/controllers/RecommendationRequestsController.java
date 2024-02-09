@@ -27,8 +27,8 @@ import javax.validation.Valid;
 
 import java.time.LocalDateTime;
 
-@Tag(name = "recommendationrequests")
-@RequestMapping("/api/recommendationrequests")
+@Tag(name = "RecommendationRequests")
+@RequestMapping("/api/recommendationrequest")
 @RestController
 @Slf4j
 public class RecommendationRequestsController extends ApiController {
@@ -76,7 +76,7 @@ public class RecommendationRequestsController extends ApiController {
         return savedRecommendationRequests;
     }
 
-    @Operation(summary= "Get a single recommendation request")
+    @Operation(summary= "Get a recommendation request")
     @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping("")
     public RecommendationRequests getById(
@@ -87,7 +87,7 @@ public class RecommendationRequestsController extends ApiController {
         return recommendationRequests;
     }
 
-    @Operation(summary= "Delete a request")
+    @Operation(summary= "Delete a recommendation request")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping("")
     public Object deleteRecommendationRequest(
@@ -99,7 +99,7 @@ public class RecommendationRequestsController extends ApiController {
         return genericMessage("RecommendationRequest with id %s deleted".formatted(id));
     }
 
-    @Operation(summary= "Update a single request")
+    @Operation(summary= "Update a single recommendation request")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("")
     public RecommendationRequests updateRecommendationRequests(
