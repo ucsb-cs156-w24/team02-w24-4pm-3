@@ -292,7 +292,7 @@ public class RecommendationRequestsControllerTests extends ControllerTestCase {
                                 .explanation("PhD CS Stanford")
                                 .dateRequested(ldt3)
                                 .dateNeeded(ldt4)
-                                .done(true)
+                                .done(false)
                                 .build();
                 String requestBody = mapper.writeValueAsString(recommendationRequestsEdited);
 
@@ -329,7 +329,7 @@ public class RecommendationRequestsControllerTests extends ControllerTestCase {
                                 .explanation("BS/MS program")
                                 .dateRequested(ldt1)
                                 .dateNeeded(ldt2)
-                                .done(true)
+                                .done(false)
                                 .build();
 
                 String requestBody = mapper.writeValueAsString(ucsbEditedDate);
