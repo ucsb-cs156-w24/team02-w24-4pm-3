@@ -263,18 +263,18 @@ public class UCSBMenuItemReviewsControllerTests extends ControllerTestCase {
                 // arrange
 
                 LocalDateTime ldt1 = LocalDateTime.parse("2022-01-03T00:00:00");
-                LocalDateTime ldt2 = LocalDateTime.parse("2023-01-03T00:00:00");
+                LocalDateTime ldt2 = LocalDateTime.parse("2023-01-04T00:00:00");
 
                 UCSBMenuItemReview ucsbMenuItemReviewOrig = UCSBMenuItemReview.builder()
                                 .itemId(21)
-                                .reviewerEmail("bananalover@ucsb.edu")
+                                .reviewerEmail("bananahater@ucsb.edu")
                                 .stars(1)
                                 .dateReviewed(ldt1)
                                 .comments("imperfect banana")
                                 .build();
 
                 UCSBMenuItemReview ucsbMenuItemReviewEdited = UCSBMenuItemReview.builder()
-                                .itemId(21)
+                                .itemId(42)
                                 .reviewerEmail("bananalover@ucsb.edu")
                                 .stars(5)
                                 .dateReviewed(ldt2)
