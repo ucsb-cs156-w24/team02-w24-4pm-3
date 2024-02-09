@@ -260,7 +260,7 @@ public class UCSBOrganizationsControllerTests extends ControllerTestCase {
                                 .orgCode("ZPR")
                                 .orgTranslationShort("ZETA PHI RHO!")
                                 .orgTranslation("ZETA PHI RHO (ZPR)")
-                                .inactive(true)
+                                .inactive(false)
                                 .build();
 
                 String requestBody = mapper.writeValueAsString(zprEdited);

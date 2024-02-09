@@ -36,8 +36,6 @@ public class UCSBOrganizationsController extends ApiController {
     @GetMapping("/all")
     public Iterable<UCSBOrganizations> allOrganizations() {
         Iterable<UCSBOrganizations> organizations = ucsbOrganizationsRepository.findAll();
-        System.out.println("call to the api\n");
-        System.out.print(organizations);
         return organizations;
     }
 
@@ -96,7 +94,7 @@ public class UCSBOrganizationsController extends ApiController {
                 .orElseThrow(() -> new EntityNotFoundException(UCSBOrganizations.class, orgCode));
 
 
-        organizations.setOrgCode(incoming.getOrgCode());  
+        // organizations.setOrgCode(incoming.getOrgCode());  
         organizations.setOrgTranslationShort(incoming.getOrgTranslationShort());
         organizations.setOrgTranslation(incoming.getOrgTranslation());
         organizations.setInactive(incoming.getInactive());
