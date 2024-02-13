@@ -279,10 +279,10 @@ public class ArticlesControllerTests extends ControllerTestCase {
                                 .build();
 
             Articles articleDateEdited = Articles.builder()
-                                .title("End of Classes")
-                                .url("http://endofclasses.com")
-                                .explanation("A detailed explanation about the end of classes.")
-                                .email("info@endofclasses.com")
+                                .title("Example")
+                                .url("http://example.com")
+                                .explanation("Something should have changed.")
+                                .email("example@example.com")
                                 .dateAdded(ldt2)
                                 .build();
 
@@ -340,7 +340,6 @@ public class ArticlesControllerTests extends ControllerTestCase {
             assertEquals("Articles with id 67 not found", json.get("message"));
 
     }
-
 
 
 }
